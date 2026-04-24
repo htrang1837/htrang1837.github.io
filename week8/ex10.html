@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập Javascript</title>
+</head>
+
+<body>
+    <h1>Chương trình tính tổng</h1>
+
+    <script src="baitap.js"></script>
+    <script>
+        let inputA = prompt("Enter number A");
+        let numA = parseFloat(inputA);
+
+
+        if (inputA === null || inputA.trim() === "" || isNaN(numA)) {
+            alert("Number A is formatted incorrect");
+        } else {
+
+            let inputB = prompt("Enter number B");
+            let numB = parseFloat(inputB);
+
+
+            if (inputB === null || inputB.trim() === "" || isNaN(numB)) {
+                alert("Number B is formatted incorrect");
+            } else {
+
+                let sum = numA + numB;
+                alert("Result:\n" + numA + " + " + numB + " = " + sum);
+            }
+        }
+    </script>
+</body>
+
+</html>
