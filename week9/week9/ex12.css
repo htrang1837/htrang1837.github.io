@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    font-family: "Times New Roman", Times, serif;
+    color: #111;
+    background: #fff;
+}
+
+.page {
+    width: 760px;
+    max-width: calc(100% - 32px);
+    margin: 64px auto;
+    text-align: center;
+}
+
+.subject {
+    margin: 0 0 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: right;
+}
+
+h1 {
+    margin: 0 0 44px;
+    font-size: 34px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px #8aa4c9;
+}
+
+form {
+    width: 390px;
+    margin: 0 auto;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+label {
+    width: 120px;
+    text-align: right;
+}
+
+input,
+select {
+    margin-left: 8px;
+    border: 2px solid #ddd;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 22px;
+    font-weight: 700;
+    box-sizing: border-box;
+}
+
+input {
+    width: 250px;
+    height: 32px;
+}
+
+select {
+    width: 64px;
+    height: 34px;
+    background: #eee;
+}
+
+button {
+    margin-top: 2px;
+    padding: 4px 14px;
+    font-size: 20px;
+    cursor: pointer;
+}

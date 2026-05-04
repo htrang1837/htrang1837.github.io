@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Calculator</title>
+    <link rel="stylesheet" href="ex12.css">
+</head>
+
+<body>
+    <main class="page">
+        <p class="subject">Web Design and Development</p>
+        <h1>Mini Calculator</h1>
+
+        <form name="frmCal" onsubmit="calculate(); return false;">
+            <div class="form-row">
+                <label for="txta">a =</label>
+                <input type="text" id="txta" name="txta" value="5">
+            </div>
+
+            <div class="form-row">
+                <label for="txtb">b =</label>
+                <input type="text" id="txtb" name="txtb" value="2">
+            </div>
+
+            <div class="form-row">
+                <label for="slto">Operator:</label>
+                <select id="slto" name="slto">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/" selected>/</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <label for="txtresult">Result:</label>
+                <input type="text" id="txtresult" name="txtresult" readonly>
+            </div>
+
+            <button type="submit">Calculate</button>
+        </form>
+    </main>
+
+    <script>
+        function calculate() {
+            var aInput = document.frmCal.txta;
+            var bInput = document.frmCal.txtb;
+            var operator = document.frmCal.slto.value;
+            var resultInput = document.frmCal.txtresult;
+            var a = Number(aInput.value);
+            var b = Number(bInput.value);
+            var result;
+
+            if (aInput.value.trim() === "" || isNaN(a)) {
+                alert("a must be a number!");
+                aInput.focus();
+                return;
+            }
+
+            if (bInput.value.trim() === "" || isNaN(b)) {
+                alert("b must be a number!");
+                bInput.focus();
+                return;
+            }
+
+            switch (operator) {
+                case "+":
+                    result = a + b;
+                    break;
+                case "-":
+                    result = a - b;
+                    break;
+                case "*":
+                    result = a * b;
+                    break;
+                case "/":
+                    if (b === 0) {
+                        alert("b can't be 0!");
+                        bInput.focus();
+                        return;
+                    }
+                    result = a / b;
+                    break;
+            }
+
+            resultInput.value = result;
+        }
+
+        calculate();
+    </script>
+</body>
+
+</html>
