@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table</title>
+<link rel="stylesheet" href="ex11.css">
+</head>
+
+<body>
+    <main class="page">
+        <p class="subject">Web Design and Development</p>
+        <h1>Multiplication Table</h1>
+
+        <div class="form-line">
+            <label for="number">Which multiplication table that you want to display?</label>
+            <input type="text" id="number" value="9" oninput="displayTable()">
+        </div>
+
+        <div id="result"></div>
+    </main>
+
+    <script>
+        function displayTable() {
+            var numberInput = document.getElementById("number").value.trim();
+            var result = document.getElementById("result");
+            var number = Number(numberInput);
+            var html = "";
+
+            if (numberInput === "" || isNaN(number)) {
+                result.innerHTML = '<div class="error">You must enter a number</div>';
+                return;
+            }
+
+            html += '<div class="table-title">Multiplication table ' + number + ':</div>';
+
+            for (var i = 1; i <= 10; i++) {
+                html += '<div class="row">' + number + ' x ' + i + ' = ' + (number * i) + '</div>';
+            }
+
+            result.innerHTML = html;
+        }
+
+        displayTable();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    font-family: "Times New Roman", Times, serif;
+    color: #111;
+    background: #fff;
+}
+
+.page {
+    width: 760px;
+    max-width: calc(100% - 32px);
+    margin: 64px auto;
+    text-align: center;
+}
+
+.subject {
+    margin: 0 0 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+h1 {
+    margin: 0 0 44px;
+    font-size: 32px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px #8aa4c9;
+}
+
+.form-line {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+input {
+    width: 94px;
+    height: 28px;
+    margin-left: 8px;
+    border: 2px solid #ddd;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 22px;
+    font-weight: 700;
+    box-sizing: border-box;
+}
+
+#result {
+    width: 360px;
+    min-height: 300px;
+    margin: 0 auto;
+    padding: 16px 14px;
+    border: 2px inset #eee;
+    text-align: left;
+    font-size: 24px;
+    font-weight: 700;
+    box-sizing: border-box;
+}
+
+.table-title {
+    margin-bottom: 4px;
+}
+
+.row {
+    line-height: 1.35;
+}
+
+.error {
+    color: #ff1d35;
+    font-size: 26px;
+}
